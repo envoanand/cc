@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Web Application</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 5px 20px #333;
+}
+h1 { color: #333; }
+p { color: #666; }
+input {
+    padding: 12px;
+    width: 85%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 12px 25px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover { background: #764ba2; }
+#result {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Welcome!</h1>
+    <p>My First Cloud Web Application</p>
+
+    <input type="text" id="username"
+    placeholder="Enter Your Name">
+
+    <br>
+
+    <button onclick="welcome()">Submit</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function welcome() {
+    let name = document.getElementById("username").value;
+
+    if(name.trim() === "") {
+        document.getElementById("result").innerHTML =
+        "Please enter your name!";
+    } else {
+        document.getElementById("result").innerHTML =
+        "Welcome " + name + "! Application is working.";
+    }
+}
+</script>
+
+</body>
+</html>
